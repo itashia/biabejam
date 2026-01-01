@@ -22,7 +22,7 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         $settings = Setting::getSettings();
-        
+
         return $panel
             ->default()
             ->id('admin')

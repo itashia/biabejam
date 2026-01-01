@@ -66,8 +66,8 @@ class SettingSeeder extends Seeder
                     'potentialAction' => [
                         '@type' => 'SearchAction',
                         'target' => config('app.url') . '/search?q={search_term_string}',
-                        'query-input' => 'required name=search_term_string'
-                    ]
+                        'query-input' => 'required name=search_term_string',
+                    ],
                 ],
                 [
                     '@context' => 'https://schema.org',
@@ -79,12 +79,12 @@ class SettingSeeder extends Seeder
                         '@type' => 'ContactPoint',
                         'telephone' => '021-12345678',
                         'contactType' => 'customer service',
-                        'availableLanguage' => ['Persian']
-                    ]
-                ]
+                        'availableLanguage' => ['Persian'],
+                    ],
+                ],
             ],
 
-            'robots_txt' => "User-agent: *\nAllow: /\nSitemap: " . config('app.url') . "/sitemap.xml",
+            'robots_txt' => "User-agent: *\nAllow: /\nSitemap: " . config('app.url') . '/sitemap.xml',
 
             'maintenance_mode' => false,
             'maintenance_message' => 'در حال به روزرسانی سرویس... به زودی برمی‌گردیم!',
@@ -92,6 +92,5 @@ class SettingSeeder extends Seeder
 
         $this->command->line("\033[1;32m✔\033[0m Setting Data has been added!");
         $this->command->info('All Setting Data have been successfully created ✅ \n');
-
     }
 }

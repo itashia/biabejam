@@ -9,7 +9,7 @@ enum RoleUsers: string
 
     public function label(): string
     {
-        return match($this) {
+        return match ($this) {
             self::ADMIN => 'مدیر کل',
             self::USER => 'کاربر عادی',
         };

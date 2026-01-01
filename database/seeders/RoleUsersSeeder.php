@@ -19,7 +19,7 @@ class RoleUsersSeeder extends Seeder
 
         foreach (RoleUsers::cases() as $role) {
             $created = Role::firstOrCreate([
-                'name' => $role->value
+                'name' => $role->value,
             ]);
 
             $this->command->line("\033[1;32m✔\033[0m Role \033[1;35m{$created->name}\033[0m has been added!");

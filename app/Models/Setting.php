@@ -43,7 +43,7 @@ class Setting extends Model
         'robots_txt',
         'sitemap_xml',
         'maintenance_mode',
-        'maintenance_message'
+        'maintenance_message',
     ];
 
     protected $casts = [
@@ -52,13 +52,13 @@ class Setting extends Model
         'schema_markup' => 'array',
         'custom_css' => 'array',
         'custom_js' => 'array',
-        'maintenance_mode' => 'boolean'
+        'maintenance_mode' => 'boolean',
     ];
 
     public static function getSettings()
     {
         return cache()->remember('site_settings', 3600, function () {
-            return self::first() ?? new self();
+            return self::first() ?? new self;
         });
     }
 }

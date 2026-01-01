@@ -13,7 +13,7 @@ class JobCategory extends Model
         'name',
         'slug',
         'description',
-        'is_active'
+        'is_active',
     ];
 
     public function users()

@@ -23,8 +23,7 @@ class AppServiceProvider extends ServiceProvider
     {
         FilamentView::registerRenderHook(
             'panels::body.start',
-            fn(): string =>
-            '<link rel="stylesheet" href="' . Vite::asset('resources/css/app.css') . '">'
+            fn (): string => '<link rel="stylesheet" href="' . Vite::asset('resources/css/app.css') . '">',
         );
     }
 }

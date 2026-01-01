@@ -26,7 +26,7 @@ class User extends Authenticatable
         'about',
         'avatar_url',
         'phone',
-        'social_links'
+        'social_links',
     ];
 
     protected $hidden = [
@@ -38,7 +38,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
         'birth_date' => 'date',
-        'social_links' => 'array'
+        'social_links' => 'array',
     ];
 
     public function jobCategory()

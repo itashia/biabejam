@@ -6,8 +6,8 @@ use App\Enums\Gender;
 use App\Enums\MaritalStatus;
 use App\Enums\MilitaryServiceStatus;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Resume extends Model
 {
@@ -37,7 +37,7 @@ class Resume extends Model
         'awards',
         'portfolio',
         'complementary_skills_fa',
-        'complementary_skills_en'
+        'complementary_skills_en',
     ];
 
     protected $casts = [
@@ -58,7 +58,7 @@ class Resume extends Model
         'complementary_skills_en' => 'array',
         'gender' => Gender::class,
         'marital_status' => MaritalStatus::class,
-        'military_service_status' => MilitaryServiceStatus::class
+        'military_service_status' => MilitaryServiceStatus::class,
     ];
 
     public function user(): BelongsTo
